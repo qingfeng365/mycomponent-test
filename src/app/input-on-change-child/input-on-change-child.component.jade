@@ -1,0 +1,8 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title 我是子组件:InputOnChangeChildComponent
+  .panel-body
+    p 最新信息: 买 {{amount}} 手 , 价格为 {{price}} 
+    p 历史信息:
+    ul
+      li(*ngFor="let change of changeLog") {{change}}

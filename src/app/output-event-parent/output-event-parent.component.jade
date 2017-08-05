@@ -1,0 +1,10 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:OutputEventParentComponent
+  .panel-body
+    h6 是否同意方案?
+    h6 同意人数: {{agreed}}  否决人数: {{disagreed}}
+    hr
+    app-output-event-child(*ngFor="let voter of voters",
+      [name]="voter",
+      (onVoted)="onVoted($event)")

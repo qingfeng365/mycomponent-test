@@ -1,0 +1,11 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title 我是子组件:HookOnChangesDemoChildComponent
+  .panel-body
+    div
+      | 父组件传来的输入属性(quantity):
+      input(type="number",placeholder="请输入数量",[(ngModel)]="quantity")
+    div 用户姓名: {{user.name}}
+    div
+      | 自身属性(price):
+      input(type="number",placeholder="请输入价格",[(ngModel)]="price")

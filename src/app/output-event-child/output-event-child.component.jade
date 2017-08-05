@@ -1,0 +1,9 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title 我是子组件:OutputEventChildComponent
+  .panel-body
+    p 表决者: {{name}}
+    div
+      button.btn.btn-success(type="button",(click)="vote(true)",[disabled]="isVoted") 同意
+      | &nbsp;
+      button.btn.btn-danger(type="button",(click)="vote(false)",[disabled]="isVoted") 否决

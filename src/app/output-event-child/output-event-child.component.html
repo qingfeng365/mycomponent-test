@@ -1,0 +1,13 @@
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是子组件:OutputEventChildComponent</h3>
+  </div>
+  <div class="panel-body">
+    <p>表决者: {{name}}</p>
+    <div>
+      <button type="button" (click)="vote(true)" [disabled]="isVoted" class="btn btn-success">同意</button>&nbsp;
+      <button type="button" (click)="vote(false)" [disabled]="isVoted" class="btn btn-danger">否决</button>
+    </div>
+  </div>
+</div>

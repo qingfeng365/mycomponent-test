@@ -1,0 +1,15 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:InputOnChangeParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <button (click)="onclick1()">变价格</button>&nbsp;
+      <button (click)="onclick2()">变手数</button>&nbsp;
+      <button (click)="onclick3()">同时变</button>&nbsp;     
+    </div>
+    <hr/>
+    <app-input-on-change-child [amount]="amount" [price]="price"></app-input-on-change-child>
+  </div>
+</div>

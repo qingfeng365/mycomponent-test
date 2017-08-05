@@ -1,0 +1,14 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:InputDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <input type="text" placeholder="请输入股票代码" [(ngModel)]="stockCode"/>
+      <input type="number" placeholder="请输入购买数量" [(ngModel)]="amount"/>
+    </div>
+    <hr/>
+    <app-input-demo-child [stockCode]="stockCode" [amount]="amount"></app-input-demo-child>
+  </div>
+</div>

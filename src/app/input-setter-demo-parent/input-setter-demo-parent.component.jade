@@ -1,0 +1,9 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:InputSetterDemoParentComponent
+  .panel-body
+    div
+      input(type="text",placeholder="请输入股票代码",[(ngModel)]="stockCode")
+      input(type="number",placeholder="请输入购买数量",[(ngModel)]="amount")
+    hr
+    app-input-setter-demo-child([stockCode]="stockCode",[amount]="amount")

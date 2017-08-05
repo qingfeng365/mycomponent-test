@@ -1,0 +1,12 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:OutputEventParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <h6>是否同意方案?</h6>
+    <h6>同意人数: {{agreed}}  否决人数: {{disagreed}}</h6>
+    <hr/>
+    <app-output-event-child *ngFor="let voter of voters" [name]="voter" (onVoted)="onVoted($event)"></app-output-event-child>
+  </div>
+</div>

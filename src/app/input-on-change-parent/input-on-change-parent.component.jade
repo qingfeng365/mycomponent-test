@@ -1,0 +1,13 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:InputOnChangeParentComponent
+  .panel-body
+    div
+      button((click)="onclick1()") 变价格
+      | &nbsp;
+      button((click)="onclick2()") 变手数
+      | &nbsp;
+      button((click)="onclick3()") 同时变
+      | &nbsp;     
+    hr
+    app-input-on-change-child([amount]="amount",[price]="price")

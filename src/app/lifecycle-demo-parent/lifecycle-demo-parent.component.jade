@@ -1,0 +1,12 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 生命周期演示
+  .panel-body
+    div
+      button.btn.btn-success(type="button",[hidden]="hasChild",(click)="createChild()") 创建组件
+      | &nbsp;
+      button.btn.btn-danger(type="button",[hidden]="!hasChild",(click)="delChild()") 销毁组件
+      | &nbsp;
+      button.btn.btn-primary(type="button",[hidden]="!hasChild",(click)="updateChildValue()") 更新属性
+    hr
+    app-lifecycle-demo-child([value]="childValue",*ngIf="hasChild")
