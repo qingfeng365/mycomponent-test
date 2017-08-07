@@ -17,6 +17,9 @@ import { LifecycleDemoChildComponent } from './lifecycle-demo-child/lifecycle-de
 import { LifecycleDemoParentComponent } from './lifecycle-demo-parent/lifecycle-demo-parent.component';
 import { HookOnChangesDemoChildComponent } from './hook-on-changes-demo-child/hook-on-changes-demo-child.component';
 import { HookOnChangesDemoParentComponent } from './hook-on-changes-demo-parent/hook-on-changes-demo-parent.component';
+import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
+import { DoCheckDefaultDemoChildComponent } from './do-check-default-demo-child/do-check-default-demo-child.component';
+import { DoCheckDefaultDemoParentComponent } from './do-check-default-demo-parent/do-check-default-demo-parent.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { HookOnChangesDemoParentComponent } from './hook-on-changes-demo-parent/
     LifecycleDemoChildComponent,
     LifecycleDemoParentComponent,
     HookOnChangesDemoChildComponent,
-    HookOnChangesDemoParentComponent
+    HookOnChangesDemoParentComponent,
+    MainCheckedDemoComponent,
+    DoCheckDefaultDemoChildComponent,
+    DoCheckDefaultDemoParentComponent
   ],
   imports: [
     BrowserModule,

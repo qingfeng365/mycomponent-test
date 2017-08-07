@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainMessageDemoComponent } from './main-message-demo/main-message-demo.component';
 import { MainLifeDemoComponent } from './main-life-demo/main-life-demo.component';
+import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'life',
     component: MainLifeDemoComponent,
+  },
+  {
+    path: 'checked',
+    component: MainCheckedDemoComponent,
   }
 ];
 
