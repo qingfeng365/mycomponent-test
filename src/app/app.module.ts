@@ -20,6 +20,8 @@ import { HookOnChangesDemoParentComponent } from './hook-on-changes-demo-parent/
 import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
 import { DoCheckDefaultDemoChildComponent } from './do-check-default-demo-child/do-check-default-demo-child.component';
 import { DoCheckDefaultDemoParentComponent } from './do-check-default-demo-parent/do-check-default-demo-parent.component';
+import { DoCheckImmutableDemoChildComponent } from './do-check-immutable-demo-child/do-check-immutable-demo-child.component';
+import { DoCheckImmutableDemoParentComponent } from './do-check-immutable-demo-parent/do-check-immutable-demo-parent.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { DoCheckDefaultDemoParentComponent } from './do-check-default-demo-paren
     HookOnChangesDemoParentComponent,
     MainCheckedDemoComponent,
     DoCheckDefaultDemoChildComponent,
-    DoCheckDefaultDemoParentComponent
+    DoCheckDefaultDemoParentComponent,
+    DoCheckImmutableDemoChildComponent,
+    DoCheckImmutableDemoParentComponent
   ],
   imports: [
     BrowserModule,

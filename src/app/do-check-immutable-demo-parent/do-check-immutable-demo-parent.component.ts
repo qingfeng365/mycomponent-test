@@ -1,19 +1,22 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
+import * as Immutable from 'immutable';
+
 @Component({
-  selector: 'app-do-check-default-demo-parent',
-  templateUrl: './do-check-default-demo-parent.component.html',
-  styleUrls: ['./do-check-default-demo-parent.component.css']
+  selector: 'app-do-check-immutable-demo-parent',
+  templateUrl: './do-check-immutable-demo-parent.component.html',
+  styleUrls: ['./do-check-immutable-demo-parent.component.css']
 })
-export class DoCheckDefaultDemoParentComponent implements OnInit,
+export class DoCheckImmutableDemoParentComponent implements OnInit,
   DoCheck {
+
   quantity = 100;
-  user = {
+  user = Immutable.Map({
     name: '张三'
-  };
+  });
   hasChild = false;
 
   changeDetected = false;
-  oldUserName = this.user.name;
+  oldUserName = this.user.get('name');
   oldQuantity = this.quantity;
 
   noChangeCount = 0;
@@ -27,10 +30,10 @@ export class DoCheckDefaultDemoParentComponent implements OnInit,
     this.hasChild = true;
   }
   ngDoCheck(): void {
-    if (this.user.name !== this.oldUserName) {
+    if (this.user.get('name') !== this.oldUserName) {
       this.changeDetected = true;
-      console.log(`父组件 - DoCheck: user.name 变为 ${this.user.name} , 旧值: ${this.oldUserName}`);
-      this.oldUserName = this.user.name;
+      console.log(`父组件 - DoCheck: user.name 变为 ${this.user.get('name')} , 旧值: ${this.oldUserName}`);
+      this.oldUserName = this.user.get('name');
     }
     if (this.quantity !== this.oldQuantity) {
       this.changeDetected = true;
@@ -46,4 +49,9 @@ export class DoCheckDefaultDemoParentComponent implements OnInit,
     }
     this.changeDetected = false;
   }
+
+  updateUsername(value: string) {
+    this.user = this.user.set('name', value);
+  }
+
 }

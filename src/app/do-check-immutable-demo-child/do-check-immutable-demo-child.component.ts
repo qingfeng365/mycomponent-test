@@ -5,12 +5,12 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-do-check-default-demo-child',
-  templateUrl: './do-check-default-demo-child.component.html',
-  styleUrls: ['./do-check-default-demo-child.component.css'],
+  selector: 'app-do-check-immutable-demo-child',
+  templateUrl: './do-check-immutable-demo-child.component.html',
+  styleUrls: ['./do-check-immutable-demo-child.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DoCheckDefaultDemoChildComponent implements OnInit,
+export class DoCheckImmutableDemoChildComponent implements OnInit,
   OnChanges, DoCheck {
 
 
@@ -65,4 +65,5 @@ export class DoCheckDefaultDemoChildComponent implements OnInit,
     }
     this.changeDetected = false;
   }
+
 }
