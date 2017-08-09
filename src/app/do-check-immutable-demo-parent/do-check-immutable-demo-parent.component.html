@@ -11,7 +11,7 @@
       <input type="text" placeholder="请输入用户姓名" #username="" (input)="updateUsername(username.value)" [value]="user.get('name')"/>
     </div>
     <p>
-      <button type="button" [hidden]="hasChild" (click)="createChild()" class="btn btn-success">创建组件</button>
+      <button type="button" [class.hidden]="hasChild" (click)="createChild()" class="btn btn-success">创建组件</button>
     </p>
     <hr/>
     <app-do-check-immutable-demo-child [user]="user.toObject()" [quantity]="quantity" *ngIf="hasChild"></app-do-check-immutable-demo-child>

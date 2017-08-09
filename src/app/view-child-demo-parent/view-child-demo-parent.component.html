@@ -1,0 +1,34 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:ViewChildDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div>#numberInput:
+      <input type="number" placeholder="请输入数量" #numberInput="" [value]="0" (input)="numberInputValue = numberInput.value"/><span>&nbsp;&nbsp;数量为:{{numberInputValue}}</span>
+    </div>
+    <hr/>
+    <div>
+      <p>
+        <button type="button" (click)="this.child1.hello()" class="btn btn-success">在视图中直接调用子组件一方法</button>
+      </p>
+      <p>
+        <button type="button" (click)="child1byViewVar.hello()" class="btn btn-success">在组件中调用子组件一方法(var)</button>
+      </p>
+      <p>
+        <button type="button" (click)="childbyType.hello()" class="btn btn-success">在组件中调用子组件方法(type)</button>
+      </p>
+      <p>
+        <button type="button" (click)="ishasChild1=!ishasChild1" class="btn btn-default">开/关 子组件1</button>&nbsp;
+        <button type="button" (click)="ishasChild2=!ishasChild2" class="btn btn-default">开/关 子组件2</button>&nbsp;
+        <button type="button" (click)="ishasChild3=!ishasChild3" class="btn btn-default">开/关 子组件3</button>
+      </p>
+    </div>
+    <hr/>
+    <app-view-child-demo-child title="一" #child1=""></app-view-child-demo-child>
+    <hr/>
+    <app-view-child-demo-child title="二" *ngIf="ishasChild2"></app-view-child-demo-child>
+    <hr/>
+    <app-view-child-demo-child title="三" *ngIf="ishasChild3"></app-view-child-demo-child>
+  </div>
+</div>

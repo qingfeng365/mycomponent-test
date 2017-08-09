@@ -10,8 +10,14 @@
     <div>对象属性(user.name):
       <input type="text" placeholder="请输入用户姓名" [(ngModel)]="user.name"/>
     </div>
+    <div>文本(无绑定):
+      <input type="text" placeholder="请输入内容"/>
+    </div>
+    <div>文本(无绑定):
+      <input type="text" placeholder="请输入内容"/>
+    </div>
     <p>
-      <button type="button" [hidden]="hasChild" (click)="createChild()" class="btn btn-success">创建组件</button>
+      <button type="button" [class.hidden]="hasChild" (click)="createChild()" class="btn btn-success">创建组件</button>
     </p>
     <hr/>
     <app-do-check-default-demo-child [user]="user" [quantity]="quantity" *ngIf="hasChild"></app-do-check-default-demo-child>

@@ -1,0 +1,28 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:ViewChildDemoParentComponent
+  .panel-body
+    div
+      | #numberInput:
+      input(type="number",placeholder="请输入数量", #numberInput="", [value]="0", (input)="numberInputValue = numberInput.value")
+      span &nbsp;&nbsp;数量为:{{numberInputValue}}
+    hr
+    div
+      p
+        button.btn.btn-success(type="button",(click)="this.child1.hello()") 在视图中直接调用子组件一方法
+      p
+        button.btn.btn-success(type="button",(click)="child1byViewVar.hello()") 在组件中调用子组件一方法(var)
+      p
+        button.btn.btn-success(type="button",(click)="childbyType.hello()") 在组件中调用子组件方法(type)
+      p
+        button.btn.btn-default(type="button",(click)="ishasChild1=!ishasChild1") 开/关 子组件1
+        | &nbsp;
+        button.btn.btn-default(type="button",(click)="ishasChild2=!ishasChild2") 开/关 子组件2
+        | &nbsp;
+        button.btn.btn-default(type="button",(click)="ishasChild3=!ishasChild3") 开/关 子组件3
+    hr
+    app-view-child-demo-child(title="一", #child1="")
+    hr
+    app-view-child-demo-child(title="二",*ngIf="ishasChild2")
+    hr
+    app-view-child-demo-child(title="三",*ngIf="ishasChild3")

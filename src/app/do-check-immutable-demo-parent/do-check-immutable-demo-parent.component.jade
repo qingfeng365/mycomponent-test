@@ -10,6 +10,6 @@
       input(type="text",placeholder="请输入用户姓名",#username="",(input)="updateUsername(username.value)",
       [value]="user.get('name')")
     p
-      button.btn.btn-success(type="button",[hidden]="hasChild",(click)="createChild()") 创建组件
+      button.btn.btn-success(type="button",[class.hidden]="hasChild",(click)="createChild()") 创建组件
     hr
     app-do-check-immutable-demo-child([user]="user.toObject()",[quantity]="quantity",*ngIf="hasChild")

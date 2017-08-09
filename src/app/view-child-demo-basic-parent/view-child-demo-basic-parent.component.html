@@ -1,0 +1,58 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:ViewChildDemoBasicParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <p>#numberInput0: 无事件绑定</p>
+      <p>
+        <input type="number" placeholder="请输入数量" #numberInput0="" [value]="0"/><span>&nbsp;&nbsp;数量为(input.value):{{numberInput0.value}}</span>
+      </p>
+    </div>
+    <div>
+      <p>#numberInput01: 有事件绑定</p>
+      <p>
+        <input type="number" placeholder="请输入数量" #numberInput01="" [value]="0" (input)="1===1"/><span>&nbsp;&nbsp;数量为(input.value):{{numberInput01.value}}</span>
+      </p>
+    </div>
+    <div>
+      <p>#numberInput:</p>
+      <p>
+        <input type="number" placeholder="请输入数量" #numberInput="" [value]="0" (input)="numberInputValue = numberInput.value"/><span>&nbsp;&nbsp;数量为(组件属性):{{numberInputValue}}</span><span>&nbsp;&nbsp;数量为(input.value):{{numberInput.value}}</span>
+      </p>
+    </div>
+    <hr/>
+    <div>
+      <p>#numberInput1(*ngIf='numberInputValue > 0'):</p>
+      <p>
+        <input type="number" placeholder="请输入数量" #numberInput1="" [value]="0" (input)="numberInputValue1 = numberInput1.value;show(numberInput1)" *ngIf="numberInputValue&gt;0" [title]="numberInput1.value"/><span>&nbsp;&nbsp;数量为(组件属性):{{numberInputValue1}}</span><span>&nbsp;&nbsp;数量为(input.value):{{numberInput1?.value}}</span>
+        <button type="button" (click)="show(numberInput1)" class="btn btn-success">测试</button>
+        <button type="button" (click)="show(numberInput1)" *ngIf="numberInputValue&gt;0" class="btn btn-success">测试1</button>
+      </p>
+    </div>
+    <hr/>
+    <div>
+      <p>
+        <button type="button" (click)="child1.hello()" class="btn btn-success">在视图中直接调用子组件一方法</button>&nbsp;&nbsp;
+        <button type="button" (click)="child2.hello()" class="btn btn-info">在视图中直接调用子组件二方法        </button>
+      </p>
+      <p>
+        <button type="button" (click)="child1byViewVar.hello()" class="btn btn-success">在组件中调用子组件一方法(var)</button>&nbsp;&nbsp;
+        <button type="button" (click)="child2byViewVar.hello()" class="btn btn-info">在组件中调用子组件二方法(var)  </button>
+      </p>
+      <p>
+        <button type="button" (click)="childbyType.hello()" class="btn btn-success">在组件中调用子组件方法(type)</button>
+      </p>
+      <p>
+        <button type="button" (click)="ishasChild2=!ishasChild2" class="btn btn-default">开/关 子组件2</button>
+      </p>
+    </div>
+    <hr/>
+    <p>无 *ngIf</p>
+    <app-view-child-demo-basic-child title="一" #child1=""></app-view-child-demo-basic-child>
+    <hr/>
+    <p>有 *ngIf</p>
+    <app-view-child-demo-basic-child title="二" #child2="" *ngIf="ishasChild2"></app-view-child-demo-basic-child>
+  </div>
+</div>

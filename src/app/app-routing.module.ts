@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainMessageDemoComponent } from './main-message-demo/main-message-demo.component';
 import { MainLifeDemoComponent } from './main-life-demo/main-life-demo.component';
 import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
+import { MainViewChildDemoComponent } from './main-view-child-demo/main-view-child-demo.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'checked',
     component: MainCheckedDemoComponent,
+  },
+  {
+    path: 'viewchild',
+    component: MainViewChildDemoComponent,
   }
 ];
 

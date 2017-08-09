@@ -1,0 +1,54 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:ViewChildDemoBasicParentComponent
+  .panel-body
+    div
+      p
+        | #numberInput0: 无事件绑定
+      p
+        input(type="number",placeholder="请输入数量", #numberInput0="", [value]="0")
+        span &nbsp;&nbsp;数量为(input.value):{{numberInput0.value}}
+    div
+      p
+        | #numberInput01: 有事件绑定
+      p
+        input(type="number",placeholder="请输入数量", #numberInput01="", [value]="0", (input)="1===1")
+        span &nbsp;&nbsp;数量为(input.value):{{numberInput01.value}}
+    div
+      p
+        | #numberInput:
+      p
+        input(type="number",placeholder="请输入数量", #numberInput="", [value]="0", (input)="numberInputValue = numberInput.value")
+        span &nbsp;&nbsp;数量为(组件属性):{{numberInputValue}}
+        span &nbsp;&nbsp;数量为(input.value):{{numberInput.value}}
+    hr
+    div
+      p
+        | #numberInput1(*ngIf='numberInputValue > 0'):
+      p
+        input(type="number",placeholder="请输入数量", #numberInput1="", [value]="0", (input)="numberInputValue1 = numberInput1.value;show(numberInput1)",*ngIf="numberInputValue>0",[title]="numberInput1.value")
+        span &nbsp;&nbsp;数量为(组件属性):{{numberInputValue1}}
+        span &nbsp;&nbsp;数量为(input.value):{{numberInput1?.value}}
+        button.btn.btn-success(type="button",(click)="show(numberInput1)") 测试
+        button.btn.btn-success(type="button",(click)="show(numberInput1)",*ngIf="numberInputValue>0") 测试1
+    hr
+    div
+      p
+        button.btn.btn-success(type="button",(click)="child1.hello()") 在视图中直接调用子组件一方法
+        | &nbsp;&nbsp;
+        button.btn.btn-info(type="button",(click)="child2.hello()") 在视图中直接调用子组件二方法        
+      p
+        button.btn.btn-success(type="button",(click)="child1byViewVar.hello()") 在组件中调用子组件一方法(var)
+        | &nbsp;&nbsp;
+        button.btn.btn-info(type="button",(click)="child2byViewVar.hello()") 在组件中调用子组件二方法(var)  
+      p
+        button.btn.btn-success(type="button",(click)="childbyType.hello()") 在组件中调用子组件方法(type)
+      p
+        button.btn.btn-default(type="button",(click)="ishasChild2=!ishasChild2") 开/关 子组件2
+    hr
+    p 无 *ngIf
+    app-view-child-demo-basic-child(title="一", #child1="")
+    hr
+    p 有 *ngIf
+    app-view-child-demo-basic-child(title="二",#child2="",*ngIf="ishasChild2")
+
