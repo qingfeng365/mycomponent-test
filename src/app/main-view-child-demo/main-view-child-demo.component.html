@@ -1,4 +1,15 @@
 
-<h3>引用模板元素和子组件的基本用法示例</h3>
-<app-view-child-demo-basic-parent [title]="viewdemo"></app-view-child-demo-basic-parent>
+<h3>引用模板元素和子组件的基本用法示例
+  <button type="button" (click)="showdemo1=!showdemo1" class="btn btn-default">打开/关闭 </button>
+</h3>
+<app-view-child-demo-basic-parent [title]="viewdemo" *ngIf="showdemo1"></app-view-child-demo-basic-parent>
 <hr/>
+<h3>@ViewChild 高级示例
+  <button type="button" (click)="showdemo2=!showdemo2" class="btn btn-default">打开/关闭 </button>
+</h3>
+<app-view-child-demo-adv *ngIf="showdemo2"></app-view-child-demo-adv>
+<hr/>
+<h3>@ViewChildren 示例
+  <button type="button" (click)="showdemo3=!showdemo3" class="btn btn-default">打开/关闭 </button>
+</h3>
+<app-view-children-demo-parent [title]="viewdemo" *ngIf="showdemo3"></app-view-children-demo-parent>

@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainViewChildDemoComponent implements OnInit {
 
+  showdemo1 = false;
+  showdemo2 = false;
+  showdemo3 = false;
+
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,20 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:ViewChildrenDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <p>
+        <button type="button" (click)="ishasChild2=!ishasChild2" class="btn btn-default">开/关 子组件2</button>&nbsp;
+        <button type="button" (click)="ishasChild3=!ishasChild3" class="btn btn-default">开/关 子组件3</button>
+      </p>
+    </div>
+    <hr/>
+    <app-view-children-demo-child title="一"></app-view-children-demo-child>
+    <hr/>
+    <app-view-children-demo-child title="二" *ngIf="ishasChild2"></app-view-children-demo-child>
+    <hr/>
+    <app-view-children-demo-child title="三" *ngIf="ishasChild3"></app-view-children-demo-child>
+  </div>
+</div>

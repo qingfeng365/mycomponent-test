@@ -1,0 +1,22 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是组件:ViewChildDemoAdvComponent</h3>
+  </div>
+  <div class="panel-body">
+    <div id="1" *ngIf="shouldShow" class="alert alert-success">ID:1</div>
+    <div id="2" *ngIf="!shouldShow" class="alert alert-info">ID:2</div>
+    <p>
+      <button type="button" (click)="toggle()" class="btn btn-default">切换</button>
+    </p>
+    <div id="var1" *ngIf="shouldShowvar" #alertvar="" class="alert alert-success">ID:var1</div>
+    <div id="var2" *ngIf="!shouldShowvar" #alertvar="" class="alert alert-info">ID:var2</div>
+    <p>
+      <button type="button" (click)="togglevar()" class="btn btn-default">切换</button>
+    </p>
+    <hr/>
+    <p>
+      <button type="button" (click)="show()" class="btn btn-default">显示当前状态</button>
+    </p>
+  </div>
+</div>

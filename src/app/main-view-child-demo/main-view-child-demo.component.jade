@@ -1,3 +1,11 @@
 h3 引用模板元素和子组件的基本用法示例
-app-view-child-demo-basic-parent([title]='viewdemo')
+  button.btn.btn-default(type="button",(click)="showdemo1=!showdemo1") 打开/关闭 
+app-view-child-demo-basic-parent([title]='viewdemo',*ngIf="showdemo1")
 hr
+h3 @ViewChild 高级示例
+  button.btn.btn-default(type="button",(click)="showdemo2=!showdemo2") 打开/关闭 
+app-view-child-demo-adv(*ngIf="showdemo2")
+hr
+h3 @ViewChildren 示例
+  button.btn.btn-default(type="button",(click)="showdemo3=!showdemo3") 打开/关闭 
+app-view-children-demo-parent([title]='viewdemo',*ngIf="showdemo3")

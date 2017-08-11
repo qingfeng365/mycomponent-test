@@ -1,0 +1,15 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是组件:ViewChildDemoAdvComponent
+  .panel-body
+    #1.alert.alert-success(*ngIf="shouldShow") ID:1
+    #2.alert.alert-info(*ngIf="!shouldShow") ID:2
+    p
+      button.btn.btn-default(type="button",(click)="toggle()") 切换
+    #var1.alert.alert-success(*ngIf="shouldShowvar",#alertvar="") ID:var1
+    #var2.alert.alert-info(*ngIf="!shouldShowvar",#alertvar="") ID:var2
+    p
+      button.btn.btn-default(type="button",(click)="togglevar()") 切换
+    hr
+    p
+      button.btn.btn-default(type="button",(click)="show()") 显示当前状态

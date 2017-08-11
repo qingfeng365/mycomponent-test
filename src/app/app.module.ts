@@ -23,10 +23,11 @@ import { DoCheckDefaultDemoParentComponent } from './do-check-default-demo-paren
 import { DoCheckImmutableDemoChildComponent } from './do-check-immutable-demo-child/do-check-immutable-demo-child.component';
 import { DoCheckImmutableDemoParentComponent } from './do-check-immutable-demo-parent/do-check-immutable-demo-parent.component';
 import { MainViewChildDemoComponent } from './main-view-child-demo/main-view-child-demo.component';
-import { ViewChildDemoChildComponent } from './view-child-demo-child/view-child-demo-child.component';
-import { ViewChildDemoParentComponent } from './view-child-demo-parent/view-child-demo-parent.component';
 import { ViewChildDemoBasicChildComponent } from './view-child-demo-basic-child/view-child-demo-basic-child.component';
 import { ViewChildDemoBasicParentComponent } from './view-child-demo-basic-parent/view-child-demo-basic-parent.component';
+import { ViewChildDemoAdvComponent, MyAlert } from './view-child-demo-adv/view-child-demo-adv.component';
+import { ViewChildrenDemoChildComponent } from './view-children-demo-child/view-children-demo-child.component';
+import { ViewChildrenDemoParentComponent } from './view-children-demo-parent/view-children-demo-parent.component';
 
 @NgModule({
   declarations: [
@@ -51,10 +52,12 @@ import { ViewChildDemoBasicParentComponent } from './view-child-demo-basic-paren
     DoCheckImmutableDemoChildComponent,
     DoCheckImmutableDemoParentComponent,
     MainViewChildDemoComponent,
-    ViewChildDemoChildComponent,
-    ViewChildDemoParentComponent,
     ViewChildDemoBasicChildComponent,
-    ViewChildDemoBasicParentComponent
+    ViewChildDemoBasicParentComponent,
+    ViewChildDemoAdvComponent,
+    MyAlert,
+    ViewChildrenDemoChildComponent,
+    ViewChildrenDemoParentComponent
   ],
   imports: [
     BrowserModule,

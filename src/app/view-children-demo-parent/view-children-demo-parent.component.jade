@@ -1,0 +1,15 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:ViewChildrenDemoParentComponent
+  .panel-body
+    div
+      p
+        button.btn.btn-default(type="button",(click)="ishasChild2=!ishasChild2") 开/关 子组件2
+        | &nbsp;
+        button.btn.btn-default(type="button",(click)="ishasChild3=!ishasChild3") 开/关 子组件3
+    hr
+    app-view-children-demo-child(title="一")
+    hr
+    app-view-children-demo-child(title="二",*ngIf="ishasChild2")
+    hr
+    app-view-children-demo-child(title="三",*ngIf="ishasChild3")
