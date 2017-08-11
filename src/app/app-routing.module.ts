@@ -4,6 +4,7 @@ import { MainMessageDemoComponent } from './main-message-demo/main-message-demo.
 import { MainLifeDemoComponent } from './main-life-demo/main-life-demo.component';
 import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
 import { MainViewChildDemoComponent } from './main-view-child-demo/main-view-child-demo.component';
+import { MainAfterViewDemoComponent } from './main-after-view-demo/main-after-view-demo.component';
 
 const routes: Routes = [
   {
@@ -26,7 +27,12 @@ const routes: Routes = [
   {
     path: 'viewchild',
     component: MainViewChildDemoComponent,
+  },
+  {
+    path: 'afterview',
+    component: MainAfterViewDemoComponent,
   }
+
 ];
 
 @NgModule({

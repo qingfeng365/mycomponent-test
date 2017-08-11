@@ -28,6 +28,9 @@ import { ViewChildDemoBasicParentComponent } from './view-child-demo-basic-paren
 import { ViewChildDemoAdvComponent, MyAlert } from './view-child-demo-adv/view-child-demo-adv.component';
 import { ViewChildrenDemoChildComponent } from './view-children-demo-child/view-children-demo-child.component';
 import { ViewChildrenDemoParentComponent } from './view-children-demo-parent/view-children-demo-parent.component';
+import { MainAfterViewDemoComponent } from './main-after-view-demo/main-after-view-demo.component';
+import { AfterViewDemoChildComponent } from './after-view-demo-child/after-view-demo-child.component';
+import { AfterViewDemoParentComponent } from './after-view-demo-parent/after-view-demo-parent.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +60,10 @@ import { ViewChildrenDemoParentComponent } from './view-children-demo-parent/vie
     ViewChildDemoAdvComponent,
     MyAlert,
     ViewChildrenDemoChildComponent,
-    ViewChildrenDemoParentComponent
+    ViewChildrenDemoParentComponent,
+    MainAfterViewDemoComponent,
+    AfterViewDemoChildComponent,
+    AfterViewDemoParentComponent
   ],
   imports: [
     BrowserModule,

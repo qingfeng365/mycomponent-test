@@ -1,0 +1,20 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:AfterViewDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <input type="number" placeholder="请输入数量" [(ngModel)]="quantity"/>
+    </p>
+    <p>
+      <button type="button" (click)="child1.hello('子组件1')" class="btn btn-default">调用child1的hello方法</button>&nbsp;
+      <button type="button" (click)="child2.hello('子组件2')" class="btn btn-default">调用child2的hello方法</button>
+    </p>
+    <hr/>
+    <p>{{message}}</p>
+    <hr/>
+    <app-after-view-demo-child #child1="" title="一"></app-after-view-demo-child>
+    <app-after-view-demo-child #child2="" title="二"></app-after-view-demo-child>
+  </div>
+</div>

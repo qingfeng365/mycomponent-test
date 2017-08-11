@@ -1,0 +1,15 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:AfterViewDemoParentComponent
+  .panel-body
+    p
+      input(type="number",placeholder="请输入数量",[(ngModel)]="quantity")
+    p
+      button.btn.btn-default(type="button",(click)="child1.hello('子组件1')") 调用child1的hello方法
+      | &nbsp;
+      button.btn.btn-default(type="button",(click)="child2.hello('子组件2')") 调用child2的hello方法
+    hr
+    p {{message}}
+    hr
+    app-after-view-demo-child(#child1="",title="一")
+    app-after-view-demo-child(#child2="",title="二")
