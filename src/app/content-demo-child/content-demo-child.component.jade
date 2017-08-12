@@ -1,0 +1,17 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title 我是子组件
+  .panel-body
+    p
+      input(type="number",placeholder="请输入数量",[(ngModel)]="quantity")
+    p
+      button.btn.btn-success(type="button",(click)="show(qtyinput)") 测试用模板变量访问
+      | &nbsp;
+      button.btn.btn-success(type="button",(click)="show(qtyinputvar)") 测试用ViewChild
+      | &nbsp;
+      button.btn.btn-success(type="button",(click)="show(qtyinputvarContent)") 测试用ContentChild      
+    .alert.alert-success 这些内容是子组件自身设置的非投影内容...
+    hr
+    ng-content
+    hr
+    .alert.alert-success 这些内容是子组件自身设置的非投影内容...

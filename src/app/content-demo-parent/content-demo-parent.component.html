@@ -1,0 +1,26 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:ContentDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <input type="number" placeholder="请输入数量" [(ngModel)]="quantity"/>
+    </p>
+    <p>
+      <button type="button" (click)="createChild()" class="btn btn-success">开/关 子组件</button>&nbsp;
+      <button type="button" (click)="show(qtyinput)" class="btn btn-success">测试用模板变量访问</button>&nbsp;
+      <button type="button" (click)="show(qtyinputvar)" class="btn btn-success">测试用ViewChild</button>
+    </p>
+    <hr/>
+    <p>{{message}}</p>
+    <hr/>
+    <app-content-demo-child *ngIf="hasChild">
+      <div class="alert alert-danger">这些内容是在父组件定义的投影内容...
+        <p>
+          <input type="number" placeholder="请输入数量" [(ngModel)]="qty" #qtyinput="" appMyinput=""/>
+        </p>
+      </div>
+    </app-content-demo-child>
+  </div>
+</div>

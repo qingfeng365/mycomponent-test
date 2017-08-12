@@ -31,6 +31,10 @@ import { ViewChildrenDemoParentComponent } from './view-children-demo-parent/vie
 import { MainAfterViewDemoComponent } from './main-after-view-demo/main-after-view-demo.component';
 import { AfterViewDemoChildComponent } from './after-view-demo-child/after-view-demo-child.component';
 import { AfterViewDemoParentComponent } from './after-view-demo-parent/after-view-demo-parent.component';
+import { MainContentDemoComponent } from './main-content-demo/main-content-demo.component';
+import { ContentDemoChildComponent } from './content-demo-child/content-demo-child.component';
+import { ContentDemoParentComponent } from './content-demo-parent/content-demo-parent.component';
+import { MyinputDirective } from './myinput.directive';
 
 @NgModule({
   declarations: [
@@ -63,7 +67,11 @@ import { AfterViewDemoParentComponent } from './after-view-demo-parent/after-vie
     ViewChildrenDemoParentComponent,
     MainAfterViewDemoComponent,
     AfterViewDemoChildComponent,
-    AfterViewDemoParentComponent
+    AfterViewDemoParentComponent,
+    MainContentDemoComponent,
+    ContentDemoChildComponent,
+    ContentDemoParentComponent,
+    MyinputDirective
   ],
   imports: [
     BrowserModule,

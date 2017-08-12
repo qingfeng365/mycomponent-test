@@ -5,6 +5,7 @@ import { MainLifeDemoComponent } from './main-life-demo/main-life-demo.component
 import { MainCheckedDemoComponent } from './main-checked-demo/main-checked-demo.component';
 import { MainViewChildDemoComponent } from './main-view-child-demo/main-view-child-demo.component';
 import { MainAfterViewDemoComponent } from './main-after-view-demo/main-after-view-demo.component';
+import { MainContentDemoComponent } from './main-content-demo/main-content-demo.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'afterview',
     component: MainAfterViewDemoComponent,
+  },
+  {
+    path: 'content',
+    component: MainContentDemoComponent
   }
 
 ];

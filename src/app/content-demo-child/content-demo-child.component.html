@@ -1,0 +1,21 @@
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是子组件</h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <input type="number" placeholder="请输入数量" [(ngModel)]="quantity"/>
+    </p>
+    <p>
+      <button type="button" (click)="show(qtyinput)" class="btn btn-success">测试用模板变量访问</button>&nbsp;
+      <button type="button" (click)="show(qtyinputvar)" class="btn btn-success">测试用ViewChild</button>&nbsp;
+      <button type="button" (click)="show(qtyinputvarContent)" class="btn btn-success">测试用ContentChild      </button>
+    </p>
+    <div class="alert alert-success">这些内容是子组件自身设置的非投影内容...</div>
+    <hr/>
+    <ng-content></ng-content>
+    <hr/>
+    <div class="alert alert-success">这些内容是子组件自身设置的非投影内容...</div>
+  </div>
+</div>
