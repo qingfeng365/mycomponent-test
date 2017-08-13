@@ -1,0 +1,11 @@
+.panel.panel-info
+  .panel-heading
+    h3.panel-title 我是子组件
+  .panel-body
+    .panel.panel-primary
+      .panel-heading
+        ng-content(select=".myheader")
+      .panel-body
+        .alert.alert-success 这些内容是子组件自身设置的非投影内容...
+      .panel-footer
+        ng-content(select=".myfooter")

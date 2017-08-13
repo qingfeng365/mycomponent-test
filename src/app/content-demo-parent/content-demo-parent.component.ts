@@ -39,11 +39,13 @@ export class ContentDemoParentComponent implements OnInit,
   }
   ngAfterContentInit(): void {
     console.log('父组件投影内容初始化完毕 ngAfterContentInit');
+    this.message = '父组件的投影内容初始化完毕 ngAfterContentInit';
   }
 
   ngAfterContentChecked(): void {
     console.log('父组件投影内容变更检测完毕 ngAfterContentChecked');
     console.log('父组件qty: ' + this.qty);
+    this.message = '父组件的投影内容变更检测完毕 ngAfterContentChecked';
   }
 
   show(msg) {

@@ -14,7 +14,6 @@ import {
 export class ContentDemoChildComponent implements OnInit,
   AfterViewInit, AfterViewChecked, DoCheck,
   AfterContentChecked, AfterContentInit {
-
   qty = 10;
 
   @ViewChild('qtyinput')

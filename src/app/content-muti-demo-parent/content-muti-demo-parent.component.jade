@@ -1,0 +1,10 @@
+.panel.panel-success
+  .panel-heading
+    h3.panel-title 我是父组件:ContentMutiDemoParentComponent
+  .panel-body
+    app-content-muti-demo-child
+      h3.panel-title.myheader 页头:父组件的投影内容 - {{header}}
+      p.myfooter 页脚1:父组件的投影内容 - {{footer}}
+      div.myfooter
+        hr
+        button.btn.btn-success(type="button",(click)="hello()") 父组件投影按钮

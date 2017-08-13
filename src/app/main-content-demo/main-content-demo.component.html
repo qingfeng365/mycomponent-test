@@ -4,3 +4,8 @@
 </h3>
 <app-content-demo-parent *ngIf="showdemo1"></app-content-demo-parent>
 <hr/>
+<h3>多投影点演示
+  <button type="button" (click)="showdemo2=!showdemo2" class="btn btn-default">打开/关闭 </button>
+</h3>
+<app-content-muti-demo-parent *ngIf="showdemo2"></app-content-muti-demo-parent>
+<hr/>

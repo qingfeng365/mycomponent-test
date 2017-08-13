@@ -1,0 +1,16 @@
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">我是父组件:ContentMutiDemoParentComponent</h3>
+  </div>
+  <div class="panel-body">
+    <app-content-muti-demo-child>
+      <h3 class="panel-title myheader">页头:父组件的投影内容 - {{header}}</h3>
+      <p class="myfooter">页脚1:父组件的投影内容 - {{footer}}</p>
+      <div class="myfooter">
+        <hr/>
+        <button type="button" (click)="hello()" class="btn btn-success">父组件投影按钮</button>
+      </div>
+    </app-content-muti-demo-child>
+  </div>
+</div>

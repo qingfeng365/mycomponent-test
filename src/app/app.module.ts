@@ -35,6 +35,8 @@ import { MainContentDemoComponent } from './main-content-demo/main-content-demo.
 import { ContentDemoChildComponent } from './content-demo-child/content-demo-child.component';
 import { ContentDemoParentComponent } from './content-demo-parent/content-demo-parent.component';
 import { MyinputDirective } from './myinput.directive';
+import { ContentMutiDemoChildComponent } from './content-muti-demo-child/content-muti-demo-child.component';
+import { ContentMutiDemoParentComponent } from './content-muti-demo-parent/content-muti-demo-parent.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,9 @@ import { MyinputDirective } from './myinput.directive';
     MainContentDemoComponent,
     ContentDemoChildComponent,
     ContentDemoParentComponent,
-    MyinputDirective
+    MyinputDirective,
+    ContentMutiDemoChildComponent,
+    ContentMutiDemoParentComponent
   ],
   imports: [
     BrowserModule,
